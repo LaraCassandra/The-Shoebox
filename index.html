@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
 
@@ -23,44 +26,104 @@
 
     <script src="./app.js"></script>
 
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/b1c8596178.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body ng-app="shoebox">
 
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#!home">The Shoe Box</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#!home">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#!footwear">Footwear</a>
-                <a class="nav-item nav-link" href="#!contact">Contact</a>
-            </div>
+    <header>
+        <div class="nav-top d-none d-lg-block">
+            <a href="#!index.html">
+                <img src="img/logo-white.png">
+            </a>
         </div>
 
-    </nav> <!-- END OF NAV BAR-->
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #212121;">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#!home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#!footwear">Footwear</a>
+                    <a class="nav-item nav-link" href="#!contact">Contact</a>
+                </div>
+            </div>
+
+            <form class="form-inline">
+                <button class="btn btn-sm btn-dark sm-icon" type="button"
+                    style="background-color: #212121; border: none;">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </form>
+
+        </nav> <!-- END OF NAV BAR-->
+
+    </header>
 
 
 
 
     <!-- MAIN CONTAINER -->
-    <div ng-controller="IntroductionController" class="container" id="main-container">
+    <div ng-controller="IntroductionController" class="container-fluid" id="main-container">
 
         <div class="col">
-
-            <h1>{{ message }}</h1>
 
             <ng-view></ng-view>
 
         </div>
 
     </div> <!-- END OF MAIN CONTAINER -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="row no-gutters text-sm-center text-lg-left text-responsive-extra">
+
+            <div class="col-0 col-lg-3"></div>
+            <div class="col-12 col-lg-3">
+                <h5>Information</h5>
+                <h6>General</h6>
+                <h6>Terms of Service</h6>
+                <h6>Privacy Policy</h6>
+            </div>
+            <div class="col-12 col-lg-3">
+                <h5>Contact us</h5>
+
+                <button class="btn btn-sm btn-dark sm-icon" type="button"
+                    style="background-color: #212121; border: none;">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button class="btn btn-sm btn-dark sm-icon" type="button"
+                    style="background-color: #212121; border: none;">
+                    <i class="fab fa-twitter"></i>
+                </button>
+
+                <button class="btn btn-sm btn-dark sm-icon" type="button"
+                    style="background-color: #212121; border: none;">
+                    <i class="fab fa-instagram"></i>
+                </button>
+
+                <form class="search">
+                    <input type="text">
+                    <button class="btn btn-sm btn-dark">Go</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <p>The Shoe Box © All rights reserved</p>
+
+    </footer> <!-- END OF FOOTER -->
 
 </body>
 
