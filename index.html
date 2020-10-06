@@ -4,46 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Shoe Box</title>
 
     <!-- FILE LINKS -->
 
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- ANGULAR LINKS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
-    <script src="app.js"></script>
+
+    <script src="./app.js"></script>
 
 </head>
 
-<body>
+<body ng-app="shoebox">
 
+    <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#!home">The Shoe Box</a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <a class="nav-item nav-link active" href="#!home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#!footwear">Footwear</a>
+                <a class="nav-item nav-link" href="#!contact">Contact</a>
             </div>
         </div>
-    </nav>
 
-    <div class="main-container">
-        <div class="row">
-            <h1>{{ 2 + 2}}</h1>
+    </nav> <!-- END OF NAV BAR-->
+
+
+
+
+    <!-- MAIN CONTAINER -->
+    <div ng-controller="IntroductionController" class="container" id="main-container">
+
+        <div class="col">
+
+            <h1>{{ message }}</h1>
+
+            <ng-view></ng-view>
+
         </div>
-    </div>
+
+    </div> <!-- END OF MAIN CONTAINER -->
 
 </body>
 
