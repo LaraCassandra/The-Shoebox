@@ -1,10 +1,16 @@
 /*
     UNIVERSAL
 */
+html, body { overflow-x: hidden; }
+
 * {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }
 
 body, p {
@@ -24,6 +30,8 @@ nav {
 }
 
 
+
+
 /*
     NAVBAR
 */
@@ -35,7 +43,7 @@ nav {
 
 .nav-item {
     text-transform: uppercase;
-    margin: 0 5px;
+
 }
 
 .nav-top img {
@@ -86,4 +94,44 @@ footer p {
 
 .search {
     margin-top: 10px;
+}
+
+
+/*
+    CONTACT PAGE
+*/
+.contact h5 {
+    margin: 50px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-pic {
+    height: 700px;
+    margin-bottom: 50px;
+}
+
+.contact-shoe-img {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-shoe-img img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-info {
+    height: 700px;
+    width: 100%;
+    padding: 50px 100px;
+}
+
+.contact-details {
+    width: 100%;
+    height: 500px;
 }

@@ -72,13 +72,11 @@
 
 
     <!-- MAIN CONTAINER -->
-    <div ng-controller="IntroductionController" class="container-fluid" id="main-container">
+    <ng-controller ng-controller="IntroductionController" class="container" id="main-container">
 
-        <div class="col">
+        <ng-view></ng-view>
 
-            <ng-view></ng-view>
-
-        </div>
+    </ng-controller>
 
     </div> <!-- END OF MAIN CONTAINER -->
 
