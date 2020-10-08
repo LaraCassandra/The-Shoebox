@@ -190,4 +190,9 @@ footer p {
 
 .card-box {
     margin-bottom: 50px;
+    border-radius: 0;
+}
+
+.card-deck {
+    border-radius: 0;
 }
