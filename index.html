@@ -26,6 +26,8 @@
 
     <script src="./app.js"></script>
 
+    <script src="./data.js"></script>
+
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/b1c8596178.js" crossorigin="anonymous"></script>
 
@@ -36,7 +38,7 @@
 
     <header>
         <div class="nav-top d-none d-lg-block">
-            <a href="#!index.html">
+            <a href="#!home">
                 <img src="img/logo-white.png">
             </a>
         </div>
@@ -51,7 +53,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#!home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#!home">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#!footwear">Footwear</a>
                     <a class="nav-item nav-link" href="#!contact">Contact</a>
                 </div>
@@ -72,18 +74,20 @@
 
 
     <!-- MAIN CONTAINER -->
-    <ng-controller ng-controller="IntroductionController" class="container" id="main-container">
+    <div class="container" id="main-container">
 
-        <ng-view></ng-view>
+        <ng-controller ng-controller="IntroductionController" class="container" id="main-container">
 
-    </ng-controller>
+            <ng-view></ng-view>
+
+        </ng-controller>
 
     </div> <!-- END OF MAIN CONTAINER -->
 
     <!-- FOOTER -->
     <footer class="footer">
 
-        <div class="row no-gutters text-sm-center text-lg-left text-responsive-extra">
+        <div class="row no-gutters text-sm-center text-lg-left">
 
             <div class="col-0 col-lg-3"></div>
             <div class="col-12 col-lg-3">
@@ -93,7 +97,7 @@
                 <h6>Privacy Policy</h6>
             </div>
             <div class="col-12 col-lg-3">
-                <h5>Contact us</h5>
+                <h5>Connect with us</h5>
 
                 <button class="btn btn-sm btn-dark sm-icon" type="button"
                     style="background-color: #212121; border: none;">
@@ -119,7 +123,7 @@
 
         </div>
 
-        <p>The Shoe Box © All rights reserved</p>
+        <p class="text-sm-center">The Shoe Box © All rights reserved</p>
 
     </footer> <!-- END OF FOOTER -->
 

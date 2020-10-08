@@ -1,2 +1,21 @@
-<h4>This is the footwear page</h4>
-<p>This is the footwear page</p>
+<div class="footwear">
+
+    <h5 class="text-responsive text-center">Showing all shoes</h5>
+
+    <div class="row row-cols-1 row-cols-md-3">
+
+
+        <!-- INDIVIDUAL CARD -->
+
+        <div class="col-12 col-md-4 card-box card-deck" ng-repeat="shoe in shoes">
+            <div class="card h-70">
+                <img src="{{ shoe.image }}" alt="shoe" class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title">{{ shoe.name }}</h4>
+                    <p class="class-body">{{ shoe.price }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

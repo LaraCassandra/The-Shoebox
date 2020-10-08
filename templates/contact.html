@@ -1,43 +1,31 @@
 <!-- CONTACT PICTURE AND PARAGRAPH -->
 <div class="container contact">
 
-    <h5 class="text-responsive text-center">All about the shoe box</h5>
-    <div class="row contact-pic">
+    <div class="container">
+
+        <h5 class="text-responsive text-center">Contact Details</h5>
 
 
-        <div class="col-12 col-lg-6 contact-shoe-img">
-            <img src="https://images.unsplash.com/photo-1572643994196-db542e58bac4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
-                alt="shoe">
-        </div>
+        <div class="row contact-details">
 
-        <div class="col-12 col-lg-6 contact-info">
-            <h5 class="text-responsive text-center">ALL ABOUT THE SHOE BOX</h5>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            <h6>Category</h6>
+                        </th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(category, address) in emailAddresses">
+                        <td>{{ category }}</td>
+                        <td>{{ address }}</td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
 
     </div>
-    <div class="row contact-details">
-
-        <p>Email Address</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Address</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="(category, address) in emailAddresses">
-                    <td>{{ category }}</td>
-                    <td>{{ address }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
 </div>
