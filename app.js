@@ -24,27 +24,30 @@ app.config(function ($routeProvider) {
         controller: "ContactController",
         templateUrl: "templates/contact.html"
     });
+
+    // PRODUCT PAGE ROUTE
+    $routeProvider.when("/product", {
+        templateUrl: "templates/product.html"
+    });
+
 });
 
-// * SEND A MESSAGE TO THE HTML 
+// * INDEX CONTROLLER
 app.controller("IntroductionController", function ($scope) {
 });
 
-// * CONTACT CONTROLLER 
+// * CONTACT CONTROLLER
 app.controller("ContactController", function ($scope) {
-    $scope.phoneNumbers = ["(012) 333 4444", "(011) 222 5555"];
-    $scope.emailAddresses = {
-        General: "info@shoebox.co.za",
-        Events: "events@shoebox.co.za",
-        Feedback: "feedback@shoebox.co.za"
-    };
 
-    $scope.shoes = shoesArray;
+    // LINK EMAILS FROM DATA.JS
+    $scope.emailAddresses = emails;
 
 });
 
+// * FOOTWEAR CONTROLLER
 app.controller("FootwearController", function ($scope) {
 
+    // LINK ARRAY OF SHOES FROM DATA.JS
     $scope.shoes = shoesArray;
 
 });

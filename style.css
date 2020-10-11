@@ -29,6 +29,10 @@ nav {
     text-align: center;
 }
 
+a, a:hover {
+    text-decoration: none;
+}
+
 
 
 
@@ -195,4 +199,8 @@ footer p {
 
 .card-deck {
     border-radius: 0;
+}
+
+.card-deck a {
+    color: #000;
 }

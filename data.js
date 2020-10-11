@@ -7,3 +7,9 @@ var shoesArray = [
     { id: "6", name: "Nike Jordan 13", price: "R2500", image: "https://images.unsplash.com/photo-1580143881495-b21dde95fc60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" },
     { id: "7", name: "Nike Air Max Orange", price: "R999", image: "https://images.unsplash.com/photo-1600185365778-7875a359b924?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80" },
 ];
+
+var emails = {
+    General: "info@shoebox.co.za",
+    Events: "events@shoebox.co.za",
+    Feedback: "feedback@shoebox.co.za"
+};
