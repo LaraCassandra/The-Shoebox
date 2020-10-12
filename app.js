@@ -1,5 +1,6 @@
 var app = angular.module("shoebox", ["ngRoute"]);
 
+
 // * ADD ROUTES USING ROUTE PROVIDER
 app.config(function ($routeProvider) {
 
@@ -32,9 +33,11 @@ app.config(function ($routeProvider) {
 
 });
 
+
 // * INDEX CONTROLLER
 app.controller("IntroductionController", function ($scope) {
 });
+
 
 // * CONTACT CONTROLLER
 app.controller("ContactController", function ($scope) {
@@ -43,6 +46,7 @@ app.controller("ContactController", function ($scope) {
     $scope.emailAddresses = emails;
 
 });
+
 
 // * FOOTWEAR CONTROLLER
 app.controller("FootwearController", function ($scope) {

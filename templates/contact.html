@@ -1,31 +1,28 @@
-<!-- CONTACT PICTURE AND PARAGRAPH -->
 <div class="container contact">
 
-    <div class="container">
+    <h5 class="text-responsive text-center">Contact Details</h5>
 
-        <h5 class="text-responsive text-center">Contact Details</h5>
+    <div class="row contact-details">
 
+        <!-- EMAILS TABLE -->
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        <h6>Category</h6>
+                    </th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(category, address) in emailAddresses">
+                    <td>{{ category }}</td>
+                    <td>{{ address }}</td>
+                </tr>
 
-        <div class="row contact-details">
-
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>
-                            <h6>Category</h6>
-                        </th>
-                        <th>Address</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="(category, address) in emailAddresses">
-                        <td>{{ category }}</td>
-                        <td>{{ address }}</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table> <!-- END OF EMAILS TABLE-->
 
     </div>
+
 </div>

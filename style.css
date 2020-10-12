@@ -1,5 +1,5 @@
 /*
-    UNIVERSAL
+   * UNIVERSAL
 */
 html, body { overflow-x: hidden; }
 
@@ -35,9 +35,8 @@ a, a:hover {
 
 
 
-
 /*
-    NAVBAR
+   * NAVBAR
 */
 .nav-top {
     height: 150px;
@@ -64,8 +63,10 @@ a, a:hover {
     height: auto;
 }
 
+
+
 /*
-    FOOTER
+   * FOOTER
 */
 footer {
     height: auto;
@@ -109,8 +110,9 @@ footer p {
 }
 
 
+
 /*
-    CONTACT PAGE
+   * CONTACT PAGE
 */
 .contact h5 {
     margin: 50px 0;
@@ -152,8 +154,9 @@ footer p {
 }
 
 
+
 /*
-    FOOTWEAR PAGE
+   * FOOTWEAR PAGE
 */
 .footwear {
     height: auto;
@@ -203,4 +206,33 @@ footer p {
 
 .card-deck a {
     color: #000;
+}
+
+
+/*
+   * PRODUCT PAGE
+*/
+.product-page {
+    height: auto;
+    padding: 50px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-page h5 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
 }
