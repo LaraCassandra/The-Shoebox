@@ -3,17 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Lara Cook">
+    <meta name="description"
+        content="The Shoebox is an online shop dedicated to selling sneakers and various sports shoes.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Shoe Box</title>
 
     <!-- FILE LINKS -->
 
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
@@ -43,6 +47,8 @@
                 <img src="img/logo-white.png">
             </a>
         </div>
+
+
 
         <!-- NAV BAR -->
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #212121;">
@@ -76,11 +82,7 @@
     <!-- MAIN CONTAINER -->
     <div class="container" id="main-container">
 
-        <ng-controller ng-controller="IntroductionController" class="container" id="main-container">
-
-            <ng-view></ng-view>
-
-        </ng-controller>
+        <ng-view></ng-view>
 
     </div> <!-- END OF MAIN CONTAINER -->
 
