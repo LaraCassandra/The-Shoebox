@@ -58,11 +58,12 @@ app.controller("FootwearController", function ($scope) {
 // * PRODUCT CONTROLLER 
 app.controller("ProductController", function($scope, $routeParams){
   
-var id = $routeParams.id;
-console.log(id);
 
+  // GET ID OF SELECTED SHOE
+  var id = $routeParams.id;
+  console.log(id);
 
-
-$scope.shoeInfo = shoesArray[id - 1];
+  // FIND SHOE IN ARRAY BASED ON ID
+  $scope.shoeInfo = shoesArray[id - 1];
 
 })

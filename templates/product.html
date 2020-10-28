@@ -15,21 +15,11 @@
         <!-- PRODUCT-DETAILS -->
         <div class="col-12 col-md-5 product-details">
 
-            <h6>Brand</h6>
+            <h6>{{ shoeInfo.brand }}</h6>
             <h5 text-responsive text-center>{{ shoeInfo.name }}</h5>
-            <p>R00,00</p>
+            <p>{{ shoeInfo.price }}</p>
 
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select Size
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+            <p>{{ shoeInfo.description }}</p>
 
             <button class="btn btn-light " type="button">
                 Add to Cart
@@ -40,11 +30,6 @@
                 <i class="fas fa-heart"></i>
             </button>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
 
         </div> <!-- END OF PRODUCT DETAILS -->
 
