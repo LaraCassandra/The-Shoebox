@@ -33,3 +33,10 @@ var reviews = [
     {name: "", shoeId: "", starRating: "", comment: ""},
     {name: "", shoeId: "", starRating: "", comment: ""},
 ]
+
+var comments = [
+    {name: "Teddy", email: "Teddy@gmail.com", starRating: "5", comment: "Great service! The delivery was very fast.."},
+    {name: "John", email: "John@gmail.com", starRating: "3", comment: "No one replied to my email about a refund but the shoes are good and it was fast"},
+    {name: "Melanie", email: "melanie@gmail.com", starRating: "4", comment: "My dad loves his new shoes"},
+    {name: "Jenny", email: "JSmith@gmail.com", starRating: "5", comment: "Large variety! Very happy!"}
+];

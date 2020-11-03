@@ -40,6 +40,24 @@ app.controller("ContactController", function ($scope) {
   // LINK EMAILS FROM DATA.JS
   $scope.emailAddresses = emails;
 
+  // LINK COMMENTS FROM DATA.JS
+  $scope.comments = comments;
+
+  // ADDING COMMENTS
+  $scope.formData = {
+    name: "",
+    email: "",
+    starRating: "5",
+    comment: ""
+  };
+
+  // PUSH COMMENTS FROM FORM
+  $scope.addComment = function(form){
+
+    $scope.comments.push({name: $scope.formData.name, email: $scope.formData.email, starRating: $scope.formData.starRating, comment: $scope.formData.comment})
+
+  };
+
 });
 
 
@@ -47,27 +65,27 @@ app.controller("ContactController", function ($scope) {
 app.controller("FootwearController", function ($scope, $http) {
 
   // LINK ARRAY OF SHOES FROM DATA.JS
-  $scope.shoes = [];
-  $scope.errorMessage = null;
+  $scope.shoes = shoesArray;
+  // $scope.errorMessage = null;
 
-  var configuration = {
-    method: "GET",
-    url: "http://localhost:3333/httpRequest.html"
-  };
+  // var configuration = {
+  //   method: "GET",
+  //   url: "http://localhost:3333/httpRequest.html"
+  // };
 
-  var successCallback = function(response){
-    $scope.shoes = response.data;
-  };
+  // var successCallback = function(response){
+  //   $scope.shoes = response.data;
+  // };
 
-  var failureCallback = function(error){
-    $scope.errorMessage = error.status + ": " + error.statusText;
-  };
+  // var failureCallback = function(error){
+  //   $scope.errorMessage = error.status + ": " + error.statusText;
+  // };
 
-  $http(configuration).then(successCallback, failureCallback);
+  // $http(configuration).then(successCallback, failureCallback);
 
-  if ($scope.shoes === null){
-    $scope.errorMessage = "Can't find shoes";
-  }
+  // if ($scope.shoes === null){
+  //   $scope.errorMessage = "Can't find shoes";
+  // }
 
 });
 
