@@ -11,21 +11,18 @@ app.config(function ($routeProvider) {
   // HOME ROUTE
   $routeProvider.when("/home", {
     templateUrl: "templates/home.html",
-    title: "Home",
   });
 
   // FOOTWEAR ROUTE
   $routeProvider.when("/footwear", {
     controller: "FootwearController",
     templateUrl: "templates/footwear.html",
-    title: "Footwear",
   });
 
   // CONTACT ROUTE
   $routeProvider.when("/contact", {
     controller: "ContactController",
     templateUrl: "templates/contact.html",
-    title: "Contact",
   });
 
   // PRODUCT PAGE ROUTE
@@ -47,10 +44,30 @@ app.controller("ContactController", function ($scope) {
 
 
 // * FOOTWEAR CONTROLLER
-app.controller("FootwearController", function ($scope) {
+app.controller("FootwearController", function ($scope, $http) {
 
   // LINK ARRAY OF SHOES FROM DATA.JS
-  $scope.shoes = shoesArray;
+  $scope.shoes = [];
+  $scope.errorMessage = null;
+
+  var configuration = {
+    method: "GET",
+    url: "http://localhost:3333/httpRequest.html"
+  };
+
+  var successCallback = function(response){
+    $scope.shoes = response.data;
+  };
+
+  var failureCallback = function(error){
+    $scope.errorMessage = error.status + ": " + error.statusText;
+  };
+
+  $http(configuration).then(successCallback, failureCallback);
+
+  if ($scope.shoes === null){
+    $scope.errorMessage = "Can't find shoes";
+  }
 
 });
 

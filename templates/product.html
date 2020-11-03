@@ -3,7 +3,7 @@
 
 
 
-    <div class="row">
+    <div class="row product-info">
 
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 product-img">
@@ -15,21 +15,24 @@
         <!-- PRODUCT-DETAILS -->
         <div class="col-12 col-md-5 product-details">
 
-            <h6>{{ shoeInfo.brand }}</h6>
-            <h5 text-responsive text-center>{{ shoeInfo.name }}</h5>
+            <h6>{{ shoeInfo.gender }}</h6>
+            <h4>{{ shoeInfo.brand }} {{ shoeInfo.name }}</h4>
             <p>{{ shoeInfo.price }}</p>
 
             <p>{{ shoeInfo.description }}</p>
 
-            <button class="btn btn-light " type="button">
-                Add to Cart
-                <i class="fas fa-shopping-cart"></i>
-            </button>
+            <div>
 
-            <button class="btn btn-light">
-                <i class="fas fa-heart"></i>
-            </button>
+                <button class="btn btn-light add-cart-btn" type="button">
+                    Add to Cart
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
 
+                <button class="btn btn-light favourite-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+
+            </div>
 
         </div> <!-- END OF PRODUCT DETAILS -->
 
@@ -40,25 +43,11 @@
 
     <div class="row">
 
+        <h5>Write a review</h5>
+
         <!-- FORM -->
         <form>
 
-            <h5>Write a review</h5>
-
-            <label>Name:</label>
-            <input type="text" placeholder="Your Name" />
-
-            <label>Stars</label>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-
-            <label>Review:</label>
-            <input type="text" placeholder="..." />
 
         </form><!-- END OF FORM -->
 

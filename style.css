@@ -183,13 +183,13 @@ footer p {
 
 .card {
     border: none;
-    box-shadow: 3px 3px 19px -7px rgba(0,0,0,0.64);
+    box-shadow: 5px 5px 8px -7px rgba(0,0,0,0.64);
     border-radius: 0;
     transition: all ease-in-out 200ms;
 }
 
 .card:hover {
-    box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.34);
+    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.34);
     transform: scale(1.02);
     transition: all ease-in-out 200ms;
     cursor: pointer;
@@ -217,6 +217,10 @@ footer p {
     padding: 50px;
 }
 
+.product-info {
+    margin-bottom: 60px;
+}
+
 .product-img {
     width: 100%;
     height: auto;
@@ -227,12 +231,42 @@ footer p {
 }
 
 .product-img img {
+    max-height: 500px;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.product-page h5 {
+.product-page h4 {
     margin: 10px 0;
     font-weight: bold;
+    font-size: 20px;
+}
+
+.product-page h5 {
+    font-weight: bold;
     font-size: 18px;
+}
+
+.product-page h6 {
+    font-size: 15px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-cart-btn {
+    max-width: 150px;
+    margin-right: 10px;
+    float: left;
+    display: inline;
+}
+
+.favourite-btn {
+    max-width: 50px;
+    float: left;
+    display: inline;
 }
