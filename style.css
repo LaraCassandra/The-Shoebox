@@ -306,6 +306,7 @@ select.ng-dirty.ng-invalid {
 
 .footwear .card img {
     max-height: 250px;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }

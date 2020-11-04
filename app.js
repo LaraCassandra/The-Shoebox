@@ -3,6 +3,7 @@ var app = angular.module("shoebox", ["ngRoute"]);
 
 // * ADD ROUTES USING ROUTE PROVIDER
 app.config(function ($routeProvider) {
+  
   // LANDING ROUTE
   $routeProvider.when("/", {
     templateUrl: "templates/home.html",
@@ -76,12 +77,14 @@ app.controller("FootwearController", function ($scope, $http) {
 
   // LINK ARRAY OF SHOES FROM DATA.JS
   $scope.shoes = shoesArray;
+
+  // ! DOES NOT WORK
   // $scope.errorMessage = null;
 
   // var configuration = {
   //   method: "GET",
   //   url: "http://localhost:3333/httpRequest.html"
-  // };
+  // }
 
   // var successCallback = function(response){
   //   $scope.shoes = response.data;
@@ -89,14 +92,20 @@ app.controller("FootwearController", function ($scope, $http) {
 
   // var failureCallback = function(error){
   //   $scope.errorMessage = error.status + ": " + error.statusText;
-  // };
+  // }
 
   // $http(configuration).then(successCallback, failureCallback);
 
-  // if ($scope.shoes === null){
-  //   $scope.errorMessage = "Can't find shoes";
-  // }
+  // $http({
+  //   method: 'GET',
+  //   url: 'http://localhost:3333/httpRequest.html'
+  // }).then(function success(response){
+  //   $scope.shoes= response.data;
+  // }, function error(response){
 
+  // });
+  // ! DOES NOT WORK
+  
 });
 
 
