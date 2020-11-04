@@ -406,3 +406,7 @@ select.ng-dirty.ng-invalid {
     float: left;
     display: inline;
 }
+
+.product-page span {
+    color: red;
+}

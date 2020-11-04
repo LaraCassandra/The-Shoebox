@@ -2,10 +2,13 @@
 
     <h5 class="text-responsive text-center">Showing all shoes</h5>
 
+    <input placeholder="Search shoes eg. Women" style="margin-bottom: 50px;" ng-model="test" type="text"
+        class="form-control">
+
     <div class="row row-cols-1 row-cols-md-3">
 
         <!-- INDIVIDUAL CARD -->
-        <div class="col-12 col-md-4 card-box card-deck" ng-repeat="shoe in shoes">
+        <div class="col-12 col-md-4 card-box card-deck" ng-repeat="shoe in shoes | filter : test">
             <a href="#!product/{{ shoe.id }}">
                 <div class="card h-100">
                     <img src="{{ shoe.image }}" alt="shoe" class="card-img-top">

@@ -117,7 +117,8 @@
 
 
     <!-- INDIVIDUAL REVIEW -->
-    <div class="card-deck align-middle comments" ng-repeat="review in shoeReviews | orderBy: '-starRating'"
+    <div class="card-deck align-middle comments"
+        ng-repeat="review in shoeReviews | orderBy: '-starRating' | orderBy: 'name'"
         ng-show="review.shoeId == '{{ shoeInfo.id }}'">
 
 
