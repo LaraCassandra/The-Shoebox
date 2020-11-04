@@ -2,37 +2,52 @@
 
     <h5 class="text-responsive text-center">Contact Details</h5>
 
-    <div class="row contact-details">
+    <!-- IMAGE -->
+    <div class="row contact-picture">
 
-        <!-- EMAILS TABLE -->
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th>
-                        <h6>Category</h6>
-                    </th>
-                    <th>
-                        <h6>Address</h6>
-                    </th>
-                </tr>
-            </thead>
+        <div class="col-12 col-md-12">
+            <img src="https://images.unsplash.com/photo-1562424995-2efe650421dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                alt="burger">
+        </div>
+
+    </div> <!-- END OF IMAGE -->
+
+
+
+    <!-- CONTACT DETAILS -->
+    <div class="row">
+
+
+
+        <!-- CONTACT TABLE -->
+        <table class="col-12 col-md-12 table table-hover">
+
             <tbody>
-                <tr ng-repeat="(category, address) in emailAddresses">
-                    <td>{{ category }}</td>
-                    <td>{{ address }}</td>
+                <tr ng-repeat="(category, details) in contact">
+                    <td>
+                        <p>{{ category }}</p>
+                    </td>
+                    <td>
+                        <p>{{ details }}
+                    </td>
+                    </p>
                 </tr>
-
             </tbody>
-        </table> <!-- END OF EMAILS TABLE-->
 
-    </div>
+        </table> <!-- END OF CONTACT TABLE-->
+
+
+    </div><!-- END OF CONTACT DETAILS -->
 
 
 
     <h5 class="text-center text-responsive">Customer Comments</h5>
 
+
+
     <!-- COMMENTS -->
     <div class="container">
+
 
 
         <!-- INDIVIDUAL COMMENT -->
@@ -56,6 +71,8 @@
 
 
         <h5 class="text-responsive text-center">Give us some Feedback</h5>
+
+
 
         <!-- FORM -->
         <form class="form" name="commentForm" ng-submit="addComment(commentForm)" novalidate id="commentForm">
@@ -107,5 +124,7 @@
                 class="btn btn-danger">Submit</button>
 
         </form> <!-- END OF FORM -->
+
+
 
     </div>

@@ -13,10 +13,11 @@ var shoesArray = [
     { id: "12", brand: "Nike", gender: "Kids Shoe",  name: "Air Max Plus", price: "R2399,95", image: "https://static.nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/i1-c3ae5b22-4587-4b56-a133-d8b68a6a9ae8/air-max-plus-older-shoe-VWK3gG.jpg", description: "The Nike Air Max Plus brings you legendary 'Tuned' Air cushioning for extra comfort. It keeps the original inspiration: wavy lines that look like palm leaves and a whale's tail near the bottom." },
 ];
 
-var emails = {
-    General: "info@shoebox.co.za",
-    Events: "events@shoebox.co.za",
-    Feedback: "feedback@shoebox.co.za"
+var contact = {
+    Telephone: "(011) 123 45678",
+    Email: "Info@shoebox.com",
+    Address: "John Vorster Drive Ext. Southdowns.",
+    Complaints: "Mary@shoebox.com"
 };
 
 var reviews = [

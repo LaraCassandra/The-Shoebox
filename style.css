@@ -114,10 +114,24 @@ footer p {
 /*
    * CONTACT PAGE
 */
+.contact {
+    height: auto;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
 .contact h5 {
     margin: 50px 0;
     font-weight: bold;
     font-size: 18px;
+}
+
+.contact-picture img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 30px;
 }
 
 .contact-pic {
@@ -153,6 +167,43 @@ footer p {
     min-height: 300px;
 }
 
+.contact span {
+color: red;
+}
+
+.comments .card {
+    margin-bottom: 20px;
+}
+
+input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+}
+
+select.ng-dirty.ng-invalid {
+    border: 1px solid red;
+}
+
+.contact h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.contact h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact .card p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.table p {
+    margin: 0;
+}
+
+
 
 
 /*
@@ -175,36 +226,36 @@ footer p {
     text-align: left;
 }
 
-.card img {
+.footwear .card img {
     max-height: 250px;
     object-fit: cover;
     object-position: center;
 }
 
-.card {
+.footwear .card {
     border: none;
     box-shadow: 5px 5px 8px -7px rgba(0,0,0,0.64);
     border-radius: 0;
     transition: all ease-in-out 200ms;
 }
 
-.card:hover {
+.footwear .card:hover {
     box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.34);
     transform: scale(1.02);
     transition: all ease-in-out 200ms;
     cursor: pointer;
 }
 
-.card-box {
+.footwear .card-box {
     margin-bottom: 50px;
     border-radius: 0;
 }
 
-.card-deck {
+.footwear .card-deck {
     border-radius: 0;
 }
 
-.card-deck a {
+.footwear .card-deck a {
     color: #000;
 }
 

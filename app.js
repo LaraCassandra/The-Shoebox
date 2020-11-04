@@ -38,7 +38,7 @@ app.config(function ($routeProvider) {
 app.controller("ContactController", function ($scope) {
 
   // LINK EMAILS FROM DATA.JS
-  $scope.emailAddresses = emails;
+  $scope.contact = contact;
 
   // LINK COMMENTS FROM DATA.JS
   $scope.comments = comments;
