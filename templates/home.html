@@ -6,7 +6,7 @@
 
         <!-- IMAGE -->
         <div class="col-12 col-lg-6 contact-shoe-img">
-            <img src="https://images.unsplash.com/photo-1572643994196-db542e58bac4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+            <img src="https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=853&q=80"
                 alt="shoe">
         </div> <!-- END OF IMAGE -->
 
@@ -27,6 +27,57 @@
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur.</p>
         </div> <!-- END OF INFORMATION -->
+
+    </div>
+
+
+
+    <!-- SECTION 2 -->
+    <div class="row section-2">
+
+        <div class="col-12 col-md-6 section-2-info">
+
+            <h5 class="text-responsive text-center">The Shoebox</h5>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+
+        </div>
+
+        <div class="col-12 col-md-6 section-2-img">
+            <img src="https://images.unsplash.com/photo-1522950025792-1eee048d6b3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=642&q=80"
+                alt="shoe">
+        </div>
+
+    </div> <!-- END OF SECTION 2 -->
+
+    <br>
+
+    <h5 class="text-responsive text-center">Current Favourites</h5>
+
+
+    <div class="row section-3 row-cols-1 row-cols-md-3">
+
+
+
+        <!-- INDIVIDUAL CARD -->
+        <div class="col-12 col-md-4 card-box card-deck" ng-repeat="favourite in favourites"
+            ng-show="favourite.favourite == 'true'">
+
+            <a href="#!product/{{ favourite.id }}">
+                <div class="card h-100">
+                    <img src="{{ favourite.image }}" alt="shoe" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ favourite.name }}</h4>
+                        <p class="class-body">{{ favourite.price }}</p>
+                    </div>
+                </div>
+            </a>
+
+        </div><!-- END OF INDIVIDUAL CARD -->
+
+
 
     </div>
 

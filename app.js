@@ -10,6 +10,7 @@ app.config(function ($routeProvider) {
 
   // HOME ROUTE
   $routeProvider.when("/home", {
+    controller: "HomeController",
     templateUrl: "templates/home.html",
   });
 
@@ -32,6 +33,15 @@ app.config(function ($routeProvider) {
   });
 
 });
+
+
+// * HOME CONTROLLER 
+app.controller("HomeController", function($scope){
+
+  // LINK SHOES FROM DATA.JS
+  $scope.favourites = shoesArray;
+
+})
 
 
 // * CONTACT CONTROLLER
