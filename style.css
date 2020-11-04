@@ -173,8 +173,14 @@ footer p {
     color: #000;
 }
 
-.section-3 h4 {
+.section-3 .card h4 {
     font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+
+.section-3 .card p {
+margin: 0;
     font-size: 18px;
     text-align: left;
 }

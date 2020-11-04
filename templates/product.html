@@ -28,9 +28,30 @@
                     <i class="fas fa-shopping-cart"></i>
                 </button>
 
-                <button class="btn btn-light favourite-btn">
+                <button title="Wishlist" type="button" data-toggle="modal" data-target="#myModal"
+                    class="btn btn-light favourite-btn">
                     <i class="fas fa-heart"></i>
                 </button>
+
+                <!-- MODAL -->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-content">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+
+                                <div class="modal-body">
+                                    <p>Added to your wishlist!</p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="X"></input>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END OF MODAL -->
 
             </div>
 
@@ -41,6 +62,57 @@
 
 
     <h5 class="text-responsive text-center">Write a review</h5>
+
+
+
+    <!-- REVIEW FORM -->
+    <form class="form" id="reviewForm" name="reviewForm" ng-submit="addReview(reviewForm)" novalidate>
+
+        <!-- NAME -->
+        <div class="form-group">
+            <label for="name" class="control-label">Name:</label>
+            <input required type="text" class="form-control" id="name" name="name" placeholder="Your name"
+                ng-model="formdata.name">
+
+            <span class="error" ng-show="reviewForm.name.$error.required">
+                *required
+            </span>
+
+        </div>
+
+        <!-- STAR RATING -->
+        <div class="form-group">
+            <label for="sel1">Star Rating:</label>
+            <select required class="form-control" id="stars" name="stars" ng-model="formdata.starRating">
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <!-- COMMENT -->
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" name="comment" id="comment" placeholder="Your feedback"
+                ng-model="formdata.comment"></textarea>
+        </div>
+
+        <!-- <div class="form-group" style="display: none;">
+            <input type="text" value="{{ shoeInfo.id }}" ng-model="formdata.shoeId">
+        </div> -->
+
+        <!-- SUBMIT -->
+        <button onclick="resetForm();" ng-disabled="reviewForm.$invalid" type="submit"
+            class="btn btn-info">Submit</button>
+
+    </form> <!-- END OF REVIEW FORM -->
+
+
+
+
+    <h5 class="text-responsive text-center">Reviews</h5>
 
 
 

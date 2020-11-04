@@ -7,6 +7,7 @@ app.config(function ($routeProvider) {
   // LANDING ROUTE
   $routeProvider.when("/", {
     templateUrl: "templates/home.html",
+    controller: "HomeController",
   });
 
   // HOME ROUTE
@@ -73,11 +74,27 @@ app.controller("ContactController", function ($scope) {
 
 
 // * FOOTWEAR CONTROLLER
-app.controller("FootwearController", function ($scope, $http) {
+app.controller("FootwearController", function ($scope) {
 
   // LINK ARRAY OF SHOES FROM DATA.JS
   $scope.shoes = shoesArray;
 
+// ! LECTURE 6
+// ! DOES NOT WORK
+  // $scope.shoes = ShoeService.data.shoes;
+  // $scope.errorMessage = ShoeService.data.errorMessage;
+
+  // ShoeService.getShoes();
+
+  // $scope.$watch(function(){
+  //   return ShoeService.data;
+  // }, function(newVal){
+  //   $scope.shoes = newVal.shoes;
+  //   $scope.errorMessage = newVal.errorMessage;
+  // }, true);
+
+
+  // ! LECTURE 5
   // ! DOES NOT WORK
   // $scope.errorMessage = null;
 
@@ -104,9 +121,37 @@ app.controller("FootwearController", function ($scope, $http) {
   // }, function error(response){
 
   // });
-  // ! DOES NOT WORK
   
 });
+
+// ! LECTURE 6
+// ! DOES NOT WORK
+// app.factory("ShoeService", function(http){
+
+//   var service = {};
+
+//   service.data = {
+//     shoes: [],
+//     errorMessage: null
+//   };
+
+//   service.getShoes = function(){
+//     var configuration = {
+//       method: "GET",
+//       url: "http://localhost:3333/httpRequest.html"
+//     };
+
+//     $http(configuration).then(function(response){
+//       service.data.shoes = response.data;
+//     }, function(error){
+//       service.data.errorMessage = error.status + ": " + error.statusText;
+//     });
+
+//   };
+
+//   return service;
+
+// })
 
 
 // * PRODUCT CONTROLLER 
@@ -122,5 +167,20 @@ app.controller("ProductController", function($scope, $routeParams){
 
   // FIND REVIEW BASED ON SHOE ID
   $scope.shoeReviews = reviews;
+
+  // REVIEW FORM
+  $scope.formdata = {
+    name: "",
+    starRating: "5",
+    comment: "",
+    shoeId: id
+  }
+
+  $scope.addReview = function(form) {
+
+    $scope.shoeReviews.push({name: $scope.formdata.name, shoeId: $scope.formdata.shoeId, starRating: $scope.formdata.starRating, comment: $scope.formdata.comment})
+
+  }
+  
 
 })
