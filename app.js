@@ -101,4 +101,7 @@ app.controller("ProductController", function($scope, $routeParams){
   // FIND SHOE IN ARRAY BASED ON ID
   $scope.shoeInfo = shoesArray[id - 1];
 
+  // FIND REVIEW BASED ON SHOE ID
+  $scope.shoeReviews = reviews;
+
 })
