@@ -273,6 +273,14 @@ select.ng-dirty.ng-invalid {
     margin: 0;
 }
 
+/* .feedback-cards .card {
+    border: none;
+    box-shadow: 5px 5px 8px -7px rgba(0,0,0,0.64);
+    border-radius: 0;
+    transition: all ease-in-out 200ms;
+    width
+} */
+
 
 
 
