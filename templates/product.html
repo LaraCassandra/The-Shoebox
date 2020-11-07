@@ -17,7 +17,7 @@
 
             <h6>{{ shoeInfo.gender }}</h6>
             <h4>{{ shoeInfo.brand }} {{ shoeInfo.name }}</h4>
-            <p>{{ shoeInfo.price }}</p>
+            <p>{{ shoeInfo.price | currency : 'R' }}</p>
 
             <p>{{ shoeInfo.description }}</p>
 
@@ -83,13 +83,16 @@
         <!-- STAR RATING -->
         <div class="form-group">
             <label for="sel1">Star Rating:</label>
-            <select required class="form-control" id="stars" name="stars" ng-model="formdata.starRating">
+            <!-- <select required class="form-control" id="stars" name="stars" ng-model="formdata.starRating">
                 <option value="5">5</option>
                 <option value="4">4</option>
                 <option value="3">3</option>
                 <option value="2">2</option>
                 <option value="1">1</option>
-            </select>
+            </select> -->
+            <span class="star" ng-repeat="i in [1,2,3,4,5]" ng-click="setStarRating(i)">
+                {{ starRatingWithinRange(i) ? "&#x2605;" : "&#x2606;" }}
+            </span>
         </div>
 
         <!-- COMMENT -->
@@ -117,8 +120,7 @@
 
 
     <!-- INDIVIDUAL REVIEW -->
-    <div class="card-deck align-middle comments"
-        ng-repeat="review in shoeReviews | orderBy: '-starRating' | orderBy: 'name'"
+    <div class="card-deck align-middle comments" ng-repeat="review in shoeReviews | orderBy: '-starRating'"
         ng-show="review.shoeId == '{{ shoeInfo.id }}'">
 
 

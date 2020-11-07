@@ -410,3 +410,11 @@ select.ng-dirty.ng-invalid {
 .product-page span {
     color: red;
 }
+
+.star {
+    font-size: 24px;
+}
+
+.star:hover {
+    cursor: pointer;
+}

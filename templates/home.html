@@ -70,7 +70,7 @@
                     <img src="{{ favourite.image }}" alt="shoe" class="card-img-top">
                     <div class="card-body">
                         <h4 class="card-title">{{ favourite.name }}</h4>
-                        <p class="card-content">{{ favourite.price }}</p>
+                        <p class="card-content">{{ favourite.price | currency : 'R' }}</p>
                     </div>
                 </div>
             </a>

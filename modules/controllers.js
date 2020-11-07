@@ -20,11 +20,11 @@ app.controller("HomeController", function($scope, ShoeService){
     //   $scope.errorMessage = newVal.errorMessage;
     // }, true);
   
-  });
+});
 
 
 
-  // * CONTACT CONTROLLER
+// * CONTACT CONTROLLER
 app.controller("ContactController", function ($scope) {
 
     // LINK EMAILS FROM DATA.JS
@@ -48,11 +48,11 @@ app.controller("ContactController", function ($scope) {
   
     };
   
-  });
+});
 
 
 
-  // * FOOTWEAR CONTROLLER
+// * FOOTWEAR CONTROLLER
 app.controller("FootwearController", function ($scope, ShoeService) {
 
     // LINK ARRAY OF SHOES FROM DATA.JS
@@ -104,6 +104,7 @@ app.controller("FootwearController", function ($scope, ShoeService) {
   });
   
 
+  
   // * PRODUCT CONTROLLER 
 app.controller("ProductController", function($scope, $routeParams){
   
@@ -125,14 +126,25 @@ app.controller("ProductController", function($scope, $routeParams){
       comment: "",
       shoeId: id
     }
-  
+    
+    // PUSH REVIEWS
     $scope.addReview = function(form) {
   
       $scope.shoeReviews.push({name: $scope.formdata.name, shoeId: $scope.formdata.shoeId, starRating: $scope.formdata.starRating, comment: $scope.formdata.comment})
   
     }
 
+    // STAR RATING 
+    $scope.starRatingAsInteger = function(review){
+      return parseInt(review.starRating);
+    }
     
+    $scope.starRatingWithinRange = function(index) {
+      return (index <= parseInt($scope.formdata.starRating));
+      };
     
-  
-  });
+    $scope.setStarRating = function(index) {
+      return $scope.formdata.starRating = index + "";
+    };
+
+});
