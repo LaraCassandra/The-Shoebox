@@ -236,6 +236,7 @@ margin: 0;
 }
 .contact-info p {
     line-height: 30px;
+    text-align: justify;
 }
 
 .contact-details {
@@ -345,6 +346,8 @@ select.ng-dirty.ng-invalid {
 }
 
 
+
+
 /*
    * PRODUCT PAGE
 */
@@ -417,4 +420,39 @@ select.ng-dirty.ng-invalid {
 
 .star:hover {
     cursor: pointer;
+}
+
+
+
+
+/*
+   * ABOUT
+*/
+.about h1 {
+    margin: 50px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.about p {
+    text-align: justify;
+    margin: 0;
+    font-size: 18px;
+}
+
+.about {
+    height: auto;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.about-image {
+    margin-top: 60px;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
 }

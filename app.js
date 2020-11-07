@@ -34,4 +34,9 @@ app.config(function ($routeProvider) {
     templateUrl: "templates/product.html",
   });
 
+  // ABOUT PAGE ROUTE
+  $routeProvider.when("/about", {
+    templateUrl: "templates/about.html"
+  })
+
 });

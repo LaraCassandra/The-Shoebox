@@ -22,6 +22,7 @@ var contact = {
 
 var reviews = [
     {name: "Kyle", shoeId: "1", starRating: "5", comment: "Great quality, they have been my go to shoes since I bought them!"},
+    {name: "Hansen", shoeId: "1", starRating: "3", comment: "Pretty neat."},
     {name: "Harry", shoeId: "2", starRating: "4", comment: "I like these shoes a lot but I think they get dirty really fast and the colour fades"},
     {name: "Michael", shoeId: "2", starRating: "5", comment: "These are amazing! I love the vibrant colors! And its like running on a cloud!!"},
     {name: "Michael", shoeId: "3", starRating: "3", comment: "Not for me, I didn't expect them to be so chunky.."},
