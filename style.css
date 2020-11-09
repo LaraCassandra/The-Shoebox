@@ -437,7 +437,8 @@ select.ng-dirty.ng-invalid {
 .about p {
     text-align: justify;
     margin: 0;
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 30px;
 }
 
 .about {

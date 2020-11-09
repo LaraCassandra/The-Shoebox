@@ -122,7 +122,7 @@ app.controller("ProductController", function($scope, $routeParams){
     // REVIEW FORM
     $scope.formdata = {
       name: "",
-      starRating: "5",
+      starRating: "3",
       comment: "",
       shoeId: id
     }

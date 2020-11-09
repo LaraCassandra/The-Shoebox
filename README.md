@@ -75,7 +75,7 @@ $ http-server . -p 3333
 ### **Product Page**
 
 - **View all information on selected shoe** *(using $params to get id of selected shoe)*
-- **Write a review on the selected shoe that appears with the other reviews** *(cannot submit without filling in required fields and choose star rating with reactive stars)*
+- **Write a review on the selected shoe that appears with the other reviews - does not affect reviews on other shoes** *(cannot submit without filling in required fields and choose star rating with reactive stars)*
 - **View all reviews on the selected shoe** *(added using ng-repeat, ordered using orderBy and filtered using ng-show to only shoe the reviews for that specific shoe based on the id)*
 
 <br />
